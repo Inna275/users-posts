@@ -1,0 +1,28 @@
+{
+  "name": "users-posts",
+  "version": "1.0.0",
+  "description": "API for users and posts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format-check": "prettier --check .",
+    "format": "prettier --write .",
+    "lint-check": "eslint .",
+    "lint": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inna275/users-posts.git"
+  },
+  "author": "Inna Denysiuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Inna275/users-posts/issues"
+  },
+  "homepage": "https://github.com/Inna275/users-posts#readme",
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "globals": "^16.5.0",
+    "prettier": "^3.7.4"
+  }
+}
