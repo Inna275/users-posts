@@ -1,0 +1,10 @@
+const PORT = 3000;
+
+const HTTP_STATUS = {
+  CREATED: 201,
+  NOT_FOUND: 404,
+  CONFLICT: 409,
+  INTERNAL_ERROR: 500,
+};
+
+export { PORT, HTTP_STATUS };
