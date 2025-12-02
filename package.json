@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "API for users and posts",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format-check": "prettier --check .",
@@ -23,6 +24,11 @@
   "devDependencies": {
     "eslint": "^9.39.2",
     "globals": "^16.5.0",
-    "prettier": "^3.7.4"
+    "prettier": "^3.7.4",
+    "prisma": "^6.19.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.1",
+    "dotenv": "^17.2.3"
   }
 }
