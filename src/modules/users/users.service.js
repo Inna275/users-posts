@@ -8,7 +8,7 @@ class UsersService {
   }
 
   findById(id) {
-    return this.prisma.user.findUnique({ where: { id } });
+    return this.prisma.user.findUniqueOrThrow({ where: { id } });
   }
 
   findAll() {

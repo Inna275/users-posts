@@ -5,12 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "format-check": "prettier --check .",
     "format": "prettier --write .",
     "lint-check": "eslint .",
     "lint": "eslint . --fix",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:unit": "npm test -- tests/unit"
   },
   "repository": {
     "type": "git",
@@ -23,15 +24,20 @@
   },
   "homepage": "https://github.com/Inna275/users-posts#readme",
   "devDependencies": {
+    "@stryker-mutator/core": "^9.4.0",
+    "@stryker-mutator/jest-runner": "^9.4.0",
     "eslint": "^9.39.2",
     "globals": "^16.5.0",
+    "jest": "^30.2.0",
     "prettier": "^3.7.4",
-    "prisma": "^6.19.1"
+    "prisma": "^6.19.1",
+    "supertest": "^7.1.4"
   },
   "dependencies": {
     "@prisma/client": "^6.19.1",
     "dotenv": "^17.2.3",
     "fastify": "^5.6.2",
-    "fastify-plugin": "^5.1.0"
+    "fastify-plugin": "^5.1.0",
+    "uuid": "^13.0.0"
   }
 }

@@ -8,7 +8,7 @@ class PostsService {
   }
 
   findById(id) {
-    return this.prisma.post.findUnique({ where: { id } });
+    return this.prisma.post.findUniqueOrThrow({ where: { id } });
   }
 
   findAll() {
