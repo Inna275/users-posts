@@ -13,7 +13,8 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:unit": "npm test -- tests/unit",
     "test:integration": "npm test -- tests/integration",
-    "test:e2e": "npm test -- tests/e2e"
+    "test:e2e": "npm test -- tests/e2e",
+    "mutation": "npx stryker run"
   },
   "repository": {
     "type": "git",
