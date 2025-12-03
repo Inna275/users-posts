@@ -12,7 +12,8 @@
     "start": "node src/server.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:unit": "npm test -- tests/unit",
-    "test:integration": "npm test -- tests/integration"
+    "test:integration": "npm test -- tests/integration",
+    "test:e2e": "npm test -- tests/e2e"
   },
   "repository": {
     "type": "git",
