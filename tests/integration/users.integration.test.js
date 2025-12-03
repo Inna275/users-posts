@@ -23,7 +23,7 @@ describe('Users API integration', () => {
   test('POST /users should create a new user', async () => {
     const res = await request.post('/users').send({
       email: userEmail,
-      name: 'Integration Test'
+      name: 'Integration Test',
     });
 
     expect(res.status).toBe(201);
@@ -35,7 +35,7 @@ describe('Users API integration', () => {
   test('POST /users should return 409 if email already exists', async () => {
     const res = await request.post('/users').send({
       email: userEmail,
-      name: 'Another Name'
+      name: 'Another Name',
     });
 
     expect(res.status).toBe(409);
@@ -45,7 +45,7 @@ describe('Users API integration', () => {
   test('POST /users should return 400 for invalid email format', async () => {
     const res = await request.post('/users').send({
       email: 'not-an-email',
-      name: 'Tester'
+      name: 'Tester',
     });
 
     expect(res.status).toBe(400);
@@ -54,7 +54,7 @@ describe('Users API integration', () => {
   test('POST /users should return 400 for too short name', async () => {
     const res = await request.post('/users').send({
       email: `new-${uuid()}@test.com`,
-      name: 'A'
+      name: 'A',
     });
 
     expect(res.status).toBe(400);

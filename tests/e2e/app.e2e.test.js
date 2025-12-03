@@ -31,17 +31,13 @@ describe('E2E: users and posts flow', () => {
   });
 
   test('Should execute full flow', async () => {
-    const userRes = await request
-      .post('/users')
-      .send(userData);
-    
+    const userRes = await request.post('/users').send(userData);
+
     expect(userRes.status).toBe(201);
     expect(userRes.body).toHaveProperty('id');
     userId = userRes.body.id;
 
-    const postRes = await request
-      .post('/posts')
-      .send({ ...postData, userId });
+    const postRes = await request.post('/posts').send({ ...postData, userId });
 
     expect(postRes.status).toBe(201);
     postId = postRes.body.id;
@@ -55,14 +51,14 @@ describe('E2E: users and posts flow', () => {
     const listPostsRes = await request.get('/posts');
     expect(listPostsRes.status).toBe(200);
     expect(Array.isArray(listPostsRes.body)).toBe(true);
-    
-    const foundPost = listPostsRes.body.find(p => p.id === postId);
+
+    const foundPost = listPostsRes.body.find((p) => p.id === postId);
     expect(foundPost).toBeDefined();
     expect(foundPost.title).toBe(postData.title);
 
     const listUsersRes = await request.get('/users');
     expect(listUsersRes.status).toBe(200);
-    const foundUser = listUsersRes.body.find(u => u.id === userId);
+    const foundUser = listUsersRes.body.find((u) => u.id === userId);
     expect(foundUser).toBeDefined();
     expect(foundUser.email).toBe(userData.email);
   });
