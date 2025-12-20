@@ -29,6 +29,8 @@
   "devDependencies": {
     "@stryker-mutator/core": "^9.4.0",
     "@stryker-mutator/jest-runner": "^9.4.0",
+    "artillery": "^2.0.27",
+    "clinic": "^13.0.0",
     "eslint": "^9.39.2",
     "globals": "^16.5.0",
     "jest": "^30.2.0",
